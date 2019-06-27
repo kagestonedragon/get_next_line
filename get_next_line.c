@@ -16,16 +16,16 @@
 #include "libft/includes/libft.h"
 #include "get_next_line.h"
 
-static char     **check_empty_string(char **stack)
+static char         **check_empty_string(char **stack)
 {
     if (!(*stack))
         *stack = ft_strnew(0);
     return (stack);
 }
 
-static int      generate_new_line(char **stack, char **line)
+static int          generate_new_line(char **stack, char **line)
 {
-    char        *temporary;
+    char            *temporary;
 
     if (!(*stack)[0])
         return (0);
@@ -49,9 +49,9 @@ static int      generate_new_line(char **stack, char **line)
     return (1);
 }
 
-static void     generate_new_string(char **stack, char *buffer)
+static void         generate_new_string(char **stack, char *buffer)
 {
-    char        *temporary;
+    char            *temporary;
 
     temporary = ft_strjoin(*stack, buffer);
     free(*stack);
@@ -59,11 +59,11 @@ static void     generate_new_string(char **stack, char *buffer)
     free(temporary);
 }
 
-int             get_next_line(const int fd, char **line)
+int                 get_next_line(const int fd, char **line)
 {
-	static char	*stack[FD_MAX];
-	char        buffer[BUFF_SIZE + 1];
-	int         amount;
+	static char     *stack[FD_MAX];
+	char            buffer[BUFF_SIZE + 1];
+	int             amount;
 
 	if (fd < 0 || read(fd, buffer, 0) || !line || fd > FD_MAX)
 		return (-1);
