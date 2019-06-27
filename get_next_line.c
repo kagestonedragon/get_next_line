@@ -25,7 +25,7 @@ static char     **check_empty_string(char **stack)
 
 static int      generate_new_line(char **stack, char **line)
 {
-	char        *temporary;
+    char        *temporary;
 
     if (!(*stack)[0])
         return (0);
@@ -51,7 +51,7 @@ static int      generate_new_line(char **stack, char **line)
 
 static void     generate_new_string(char **stack, char *buffer)
 {
-	char        *temporary;
+    char        *temporary;
 
     temporary = ft_strjoin(*stack, buffer);
     free(*stack);
