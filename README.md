@@ -1,5 +1,7 @@
 # get_next_line
 
+`Проект реализовывался в рамках обучения в "Школе 21". Разработка функции на си для построчного чтения из файла.`
+
 That function takes file descriptor, and the string where line from file will be written.
 
 ```c
